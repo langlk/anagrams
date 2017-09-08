@@ -30,7 +30,7 @@ _A Ruby Script_
   * Two inputs forma a palindrome if first input equals the reverse of the second.
     * Example input: "diva" "avid"
     * Example output: true
-  * Program ignores case when checking if word is a palindrome
+  * Program ignores case when checking if word is a palindrome.
     * Example input: "Avid" "DIVA"
     * Example output: true
 * Program returns an error if either input does not contain a vowel (including y).

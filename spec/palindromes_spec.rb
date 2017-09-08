@@ -11,4 +11,8 @@ describe("Palindrome#form_palindrome?") do
   it("returns true if first input equals the reverse of the second") do
     expect(Palindrome.are_palindrome?("diva", "avid")).to(eq(true))
   end
+
+  it("ignores case when checking if word is a palindrome") do
+    expect(Palindrome.are_palindrome?("Diva", "AVID")).to(eq(true))
+  end
 end
