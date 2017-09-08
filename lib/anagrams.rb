@@ -3,6 +3,7 @@ require 'palindromes'
 
 class Anagram
   attr_reader(:original)
+
   def initialize(string)
     @original = string
   end
@@ -39,5 +40,9 @@ class Anagram
     else
       return "These #{input_type} are not anagrams."
     end
+  end
+
+  def anagram_of(string)
+    self.class.are_anagrams(@original, string)
   end
 end

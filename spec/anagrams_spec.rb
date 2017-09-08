@@ -3,12 +3,13 @@
 require 'rspec'
 require 'anagrams'
 
-describe("Anagrams#initialize") do
+describe("Anagram#initialize") do
   it("creates an Anagram object with input string saved as the original string") do
     anagram_test = Anagram.new("desserts")
     expect(anagram_test.original).to(eq("desserts"))
   end
 end
+
 describe("Anagram#is_word?") do
   it("returns false if input does not contain a vowel (including y).") do
     expect(Anagram.is_word?("Rrrgh")).to(eq(false))
@@ -76,5 +77,27 @@ describe('Anagram#are_anagrams') do
     expect(Anagram.are_anagrams("Eat desserts!", "Stressed, tea")).to(eq("These phrases are anagrams."))
     expect(Anagram.are_anagrams("This is a test!", "Word!")).to(eq("These phrases are antigrams (no letter matches)."))
     expect(Anagram.are_anagrams("A Santa!", "at Nasa...")).to(eq("These phrases are anagrams. They also form a palindrome."))
+  end
+end
+
+describe("Anagram#anagram_of") do
+  it("determines whether original string of Anagram object and inputted string are anagrams") do
+    anagram_test = Anagram.new("Eat desserts!")
+    expect(anagram_test.anagram_of("Stressed diva")).to(eq("These phrases are not anagrams."))
+  end
+
+  it("determines whether original string of Anagram object and inputted string are anagrams") do
+    anagram_test = Anagram.new("Eat desserts!")
+    expect(anagram_test.anagram_of("Stressed, Tea")).to(eq("These phrases are anagrams."))
+  end
+
+  it("determines whether original string of Anagram object and inputted string form a palindrome") do
+    anagram_test = Anagram.new("Eat desserts!")
+    expect(anagram_test.anagram_of("Stressed, Tae")).to(eq("These phrases are anagrams. They also form a palindrome."))
+  end
+
+  it("determines whether original string of Anagram object and inputted string are antigrams") do
+    anagram_test = Anagram.new("Eat desserts!")
+    expect(anagram_test.anagram_of("Pool zoo")).to(eq("These phrases are antigrams (no letter matches)."))
   end
 end
