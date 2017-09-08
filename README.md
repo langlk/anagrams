@@ -15,7 +15,10 @@ _A Ruby script to evaluate whether two inputs are anagrams, palindromes, or anti
   * In the root directory, run ```$ ruby lib/test_anagrams.rb```
 
 ## Specifications
-### Anagram
+### ```Anagram```
+
+_The main class for determining if two strings are anagrams, palindromes, or antigrams. Can create a specific instance with a set original string, or use class method which takes two strings and checks them._
+
 #### Class Methods
 #### ```are_anagrams(string1, string2)```
 * Method returns "These words are not anagrams." if two words are not anagrams.
@@ -66,7 +69,10 @@ _A Ruby script to evaluate whether two inputs are anagrams, palindromes, or anti
   * Example Input: a has orginal string = "eat desserts", input string = "stressed tea"
   * Example Output: "These phrases are anagrams."
 
-### Dictionary
+### ```Dictionary```
+
+_Custom Dictionary class for determining if the words given to Anagrams as input are words. Currently has a few very basic rules to account for variations on words existing in the file._
+
 #### Class Methods
 #### ```is_word?```
 
@@ -88,7 +94,24 @@ _A Ruby script to evaluate whether two inputs are anagrams, palindromes, or anti
 * Method returns true if word is equal to a word in words file + "est".
   * Example Input: "tallest"
   * Example Output: true
-  
+
+### ```Palindrome```
+
+_Class that handles determining whether inputs are Palindromes. Code adapted from my earlier Epicodus exercise [here](https://github.com/langlk/palindromes)._
+
+#### Class Methods
+#### ```are_palindrome?(string1, string2)```
+
+* Method returns false if first input does not equal reverse of second.
+  * Example Input: "cat", "act"
+  * Example Output: false
+* Method returns true if first input equals the reverse of the second.
+  * Example Input: "diva", "avid"
+  * Example Output: true
+* Method ignores case when checking if word is a palindrome
+  * Example Input: "Diva" "AVID"
+  * Example Output: true
+
 ## Support and contact details
 
 _Please contact [kels.langlois@gmail.com](mailto:kels.langlois@gmail.com) with questions, comments, or issues._
