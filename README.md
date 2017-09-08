@@ -96,7 +96,7 @@ _The main class for determining if two strings are anagrams, palindromes, or ant
   * Example Output: []
 * Method returns all single-word anagrams formed from input that Dictionary.is_words? recognizes as words.
   * Example Input: "abc"
-  * Example Output: ["cab"]
+  * Example Output: ["bac", "cab"]
 
 ### ```Dictionary```
 
