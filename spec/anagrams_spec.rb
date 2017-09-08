@@ -36,8 +36,10 @@ describe('Anagram#are_anagrams') do
     expect(Anagram.are_anagrams("ggggrrr arrrgh", "eat brains")).to(eq("Error: Inputs must consist of real words."))
   end
 
-  it('ignores punctuation and spaces when evaluating inputs as anagrams or a palindrome') do
+  it('ignores punctuation and spaces when evaluating inputs as anagrams, antigrams, or palindromes') do
     expect(Anagram.are_anagrams("Eat desserts!", "Stressed, tea")).to(eq("These phrases are anagrams."))
+    expect(Anagram.are_anagrams("This is a test!", "Word!")).to(eq("These phrases are antigrams (no letter matches)."))
+    expect(Anagram.are_anagrams("A Santa!", "at Nasa...")).to(eq("These phrases are anagrams. They also form a palindrome."))
   end
 end
 

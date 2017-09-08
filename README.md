@@ -45,7 +45,7 @@ _A Ruby Script_
 * Program returns an error if either input phrase has a word that has no vowels (including y).
   * Example Input: "eat brains" "ggggrrr arrrgh"
   * Example Output: "Error: Inputs must consist of real words."
-* Program ignores punctuation and spaces when evaluating inputs as anagrams or a palindrome.
+* Program ignores punctuation and spaces when evaluating inputs as anagrams, antigrams, or palindrome.
   * Example Input: "Eat desserts!" "Stressed, tea."
   * Example Output: "These phrases are anagrams."
 
