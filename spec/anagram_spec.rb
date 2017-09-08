@@ -33,7 +33,10 @@ describe("Anagram#anagram_of") do
 end
 
 describe("Anagram#get_anagrams") do
-  
+  it("empty array if original string is empty") do
+    anagram_test = Anagram.new("")
+    expect(anagram_test.get_anagrams).to(eq([]))
+  end
 end
 
 # while this method is not in use anymore, I'm leaving it in to show that I did meet the original rules of the project before implementing the is_word? method in Dictionary.
