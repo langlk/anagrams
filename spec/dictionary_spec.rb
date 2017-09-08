@@ -3,7 +3,7 @@
 require 'rspec'
 require 'dictionary'
 
-describe("Dictionary") do
+describe("Dictionary#is_word?") do
   it("returns false if word is an empty string") do
     expect(Dictionary.is_word?("")).to(eq(false))
   end
