@@ -15,7 +15,8 @@ class Anagram
   end
 
   def get_anagrams
-    @original.chars.permutation.map do |permutation|
+    only_alpha = @original.gsub(/[^a-z]/,"")
+    only_alpha.chars.permutation.map do |permutation|
       permutation.join("")
     end
   end

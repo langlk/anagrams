@@ -47,6 +47,11 @@ describe("Anagram#get_anagrams") do
     anagram_test = Anagram.new("abc")
     expect(anagram_test.get_anagrams).to(eq(["abc", "acb", "bac", "bca", "cab", "cba"]))
   end
+
+  it("ignores non-alphabetical characters in original string when finding anagrams") do
+    anagram_test = Anagram.new("i'd a")
+    expect(anagram_test.get_anagrams).to(eq(["ida", "iad", "dia", "dai", "aid", "adi"]))
+  end
 end
 
 # while this method is not in use anymore, I'm leaving it in to show that I did meet the original rules of the project before implementing the is_word? method in Dictionary.
