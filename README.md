@@ -11,6 +11,8 @@ _A Ruby script to evaluate whether two inputs are anagrams, palindromes, or anti
 ## Setup/Installation Requirements
 
 * Clone this repository
+* To run an anagram tester that determines whether two inputs are anagrams, palindromes, or antigrams:
+  * In the root directory, run ```$ ruby lib/test_anagrams.rb```
 
 ## Specifications
 
