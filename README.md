@@ -19,7 +19,7 @@ _A Ruby script with an anagram generator and methods to evaluate whether two inp
 ## Specifications
 ### ```Anagram```
 
-_The main class for determining if two strings are anagrams, palindromes, or antigrams. Can create a specific instance with a set original string, or use class method which takes two strings and checks them._
+_The main class for generating anagrams, and determining if two strings are anagrams, palindromes, or antigrams. Can create a specific instance with a set original string, or use class method which takes two strings and checks them._
 
 #### Class Methods
 #### ```are_anagrams(string1, string2)```
