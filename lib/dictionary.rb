@@ -2,13 +2,16 @@
 
 class Dictionary
   def self.is_word?(string)
+    string = string.downcase
     dictionary = File.new("lib/words.txt", "r")
     dictionary.each_line do |word|
-      if word.downcase.chomp == string.downcase
+      word = word.downcase.chomp
+      if word == string
+        return true
+      elsif (word + "s") == string
         return true
       end
     end
-    puts string + ' is not a word'
     false
   end
 end

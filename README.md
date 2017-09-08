@@ -79,6 +79,12 @@ _A Ruby script to evaluate whether two inputs are anagrams, palindromes, or anti
 * Method ignores case when checking word.
   * Example Input: "paris"
   * Example Output: true
+* Method returns true if word is equal to a word in words file + "s".
+  * Example Input: "zombies"
+  * Example Output: true
+* Method returns true if word is equal to a word in words file + "ed".
+  * Example Input: "stressed"
+  * Example Output: true
 
 ## Support and contact details
 

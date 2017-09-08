@@ -15,4 +15,8 @@ describe("Dictionary") do
   it("ignores case when checking word") do
     expect(Dictionary.is_word?("paris")).to(eq(true))
   end
+
+  it("returns true if word is equal to a word in words file + 's'") do
+    expect(Dictionary.is_word?("zombies")).to(eq(true))
+  end
 end
