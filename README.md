@@ -76,6 +76,9 @@ _Custom Dictionary class for determining if the words given to Anagrams as input
 #### Class Methods
 #### ```is_word?```
 
+* Method returns false if word is an empty string.
+  * Example Input: ""
+  * Example Output: false
 * Method returns false if word is not in words file.
   * Example Input: "rrrrrrgh"
   * Example Output: false

@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative 'anagrams'
+require_relative 'anagram'
 
 puts "Welcome to Kelsey's anagram tester!"
 loop do

@@ -10,12 +10,19 @@ class Anagram
     @original = string
   end
 
+  def anagram_of(string)
+    self.class.are_anagrams(@original, string)
+  end
+
   def self.is_word?(string)
     # Regex to find if input includes a vowel.
     string.match(/[aeiouy]/i) ? true : false
   end
 
   def self.all_words?(string)
+    if string == ""
+      return false
+    end
     non_words = string.split.reject { |word| Dictionary.is_word?(word) }
     non_words.length == 0
   end
@@ -48,9 +55,5 @@ class Anagram
     else
       return "These #{input_type} are not anagrams."
     end
-  end
-
-  def anagram_of(string)
-    self.class.are_anagrams(@original, string)
   end
 end

@@ -21,6 +21,10 @@ describe("Anagram#is_word?") do
 end
 
 describe("Anagram#all_words?") do
+  it("returns false if input is empty") do
+    expect(Anagram.all_words?("")).to(eq(false))
+  end
+  
   it("returns false if any word in input is not a word") do
     expect(Anagram.all_words?("zombies like brains rrrrgh")).to(eq(false))
   end
