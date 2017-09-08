@@ -3,7 +3,7 @@ require 'palindromes'
 
 class Anagram
   def self.is_word?(input)
-    return false
+    input.match(/[aeiouy]/i) ? true : false
   end
 
   def self.are_anagrams(input1, input2)

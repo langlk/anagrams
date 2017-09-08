@@ -22,7 +22,11 @@ describe('Anagram#are_anagrams') do
 end
 
 describe("Anagram#is_word?") do
-  it("returns an error if input does not contain a vowel (including y).") do
+  it("returns false if input does not contain a vowel (including y).") do
     expect(Anagram.is_word?("Rrrgh")).to(eq(false))
+  end
+
+  it("returns true if input does contain a vowel (including y).") do
+    expect(Anagram.is_word?("Hello")).to(eq(true))
   end
 end
