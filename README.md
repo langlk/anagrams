@@ -13,6 +13,8 @@ _A Ruby script to evaluate whether two inputs are anagrams, palindromes, or anti
 * Clone this repository
 * To run an anagram tester that determines whether two inputs are anagrams, palindromes, or antigrams:
   * In the root directory, run ```$ ruby lib/test_anagrams.rb```
+* To run an anagram generator that finds the anagrams formed by a given input:
+  * In the root directory, run ```$ ruby lib/get_anagrams.rb```
 
 ## Specifications
 ### ```Anagram```
@@ -141,6 +143,10 @@ _Class that handles determining whether inputs are Palindromes. Code adapted fro
 * Method ignores case when checking if word is a palindrome
   * Example Input: "Diva" "AVID"
   * Example Output: true
+
+## Known Bugs
+
+*Dictionary currently has a fairly limited ```is_word?``` method. This means that ```are_anagrams``` may incorrectly state that inputs did not consist of words, especially if the words were less common English words. Adding these words to words.txt will let Dictionary recognize them. Contractions will not be recognized except for 's, and need to be added to words.txt without apostrophes.*
 
 ## Support and contact details
 
