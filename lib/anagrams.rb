@@ -9,6 +9,7 @@ class Anagram
   end
 
   def self.is_word?(input)
+    # Regex to find if input includes a vowel.
     input.match(/[aeiouy]/i) ? true : false
   end
 
@@ -26,7 +27,9 @@ class Anagram
     if !(all_words?(input1) & all_words?(input2))
       return "Error: Inputs must consist of real words."
     end
+    # Result should say "words" if inputs are one word each, and "phrases" otherwise.
     input_type = input1.include?(" ") | input2.include?(" ") ? "phrases" : "words"
+    # Regex to remove everything but letters and numbers from downcased inputs.
     input1 = input1.downcase.gsub(/[^a-z0-9]/,"")
     input2 = input2.downcase.gsub(/[^a-z0-9]/,"")
     if input1.chars.sort == input2.chars.sort
