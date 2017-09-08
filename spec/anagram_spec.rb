@@ -10,6 +10,7 @@ describe("Anagram#initialize") do
   end
 end
 
+# while this method is not in use anymore, I'm leaving it in to show that I did meet the original rules of the project before implementing the is_word? method in Dictionary.
 describe("Anagram#is_word?") do
   it("returns false if input does not contain a vowel (including y).") do
     expect(Anagram.is_word?("Rrrgh")).to(eq(false))
@@ -24,7 +25,7 @@ describe("Anagram#all_words?") do
   it("returns false if input is empty") do
     expect(Anagram.all_words?("")).to(eq(false))
   end
-  
+
   it("returns false if any word in input is not a word") do
     expect(Anagram.all_words?("zombies like brains rrrrgh")).to(eq(false))
   end
