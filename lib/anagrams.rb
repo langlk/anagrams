@@ -17,12 +17,12 @@ class Anagram
   end
 
   def self.are_anagrams(input1, input2)
+    if !(all_words?(input1) & all_words?(input2))
+      return "Error: Inputs must consist of real words."
+    end
     input_type = input1.include?(" ") | input2.include?(" ") ? "phrases" : "words"
     input1 = input1.downcase.delete(" ")
     input2 = input2.downcase.delete(" ")
-    if !(is_word?(input1) & is_word?(input2))
-      return "Error: Inputs must consist of real words."
-    end
     if input1.chars.sort == input2.chars.sort
       result = "These #{input_type} are anagrams."
       if Palindrome.are_palindrome?(input1, input2)
