@@ -15,8 +15,8 @@ _A Ruby script to evaluate whether two inputs are anagrams, palindromes, or anti
   * In the root directory, run ```$ ruby lib/test_anagrams.rb```
 
 ## Specifications
-
-### Class Methods
+### Anagram
+#### Class Methods
 #### ```are_anagrams(string1, string2)```
 * Method returns "These words are not anagrams." if two words are not anagrams.
   * Example Input: "Bob" "Potato"
@@ -59,13 +59,27 @@ _A Ruby script to evaluate whether two inputs are anagrams, palindromes, or anti
   * Example Input: "desserts"
   * Example Output: original = "desserts"
 
-### Instance Methods
+#### Instance Methods
 #### ```anagram_of(string)```
 
 * Method determines whether original string of Anagram object and inputted string are anagrams, palindromes, or antigrams, following all specifications listed for ```are_anagrams```.
   * Example Input: a has orginal string = "eat desserts", input string = "stressed tea"
   * Example Output: "These phrases are anagrams."
 
+### Dictionary
+#### Class Methods
+#### ```is_word?```
+
+* Method returns false if word is not in system words file.
+  * Example Input: "rrrrrrgh"
+  * Example Output: false
+* Method returns true if word is in system words file.
+  * Example Input: "hello"
+  * Example Output: true
+* Method ignores case when checking word.
+  * Example Input: "paris"
+  * Example Output: true
+  
 ## Support and contact details
 
 _Please contact [kels.langlois@gmail.com](mailto:kels.langlois@gmail.com) with questions, comments, or issues._
