@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'rspec'
-require 'palindromes'
+require 'palindrome'
 
 describe("Palindrome#form_palindrome?") do
   it("returns false if first input does not equal reverse of second") do

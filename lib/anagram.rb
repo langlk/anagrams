@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require_relative 'dictionary'
-require_relative 'palindromes'
+require_relative 'palindrome'
 
 class Anagram
   attr_reader(:original)

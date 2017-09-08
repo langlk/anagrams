@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'rspec'
-require 'anagrams'
+require 'anagram'
 
 describe("Anagram#initialize") do
   it("creates an Anagram object with input string saved as the original string") do
