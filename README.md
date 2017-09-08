@@ -70,16 +70,16 @@ _A Ruby script to evaluate whether two inputs are anagrams, palindromes, or anti
 #### Class Methods
 #### ```is_word?```
 
-* Method returns false if word is not in system words file.
+* Method returns false if word is not in words file.
   * Example Input: "rrrrrrgh"
   * Example Output: false
-* Method returns true if word is in system words file.
+* Method returns true if word is in words file.
   * Example Input: "hello"
   * Example Output: true
 * Method ignores case when checking word.
   * Example Input: "paris"
   * Example Output: true
-  
+
 ## Support and contact details
 
 _Please contact [kels.langlois@gmail.com](mailto:kels.langlois@gmail.com) with questions, comments, or issues._
