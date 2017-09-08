@@ -6,7 +6,7 @@
 
 ## Description
 
-_A Ruby script to evaluate whether two inputs are anagrams, palindromes, or antigrams. Two strings are anagrams if they share all the same letters, palindromes if the first string is the reverse of the second, and antigrams if they share no letters._
+_A Ruby script with an anagram generator and methods to evaluate whether two inputs are anagrams, palindromes, or antigrams. Two strings are anagrams if they share all the same letters, palindromes if the first string is the reverse of the second, and antigrams if they share no letters._
 
 ## Setup/Installation Requirements
 
