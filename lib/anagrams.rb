@@ -2,6 +2,11 @@
 require 'palindromes'
 
 class Anagram
+  attr_reader(:original)
+  def initialize(string)
+    @original = string
+  end
+
   def self.is_word?(input)
     input.match(/[aeiouy]/i) ? true : false
   end

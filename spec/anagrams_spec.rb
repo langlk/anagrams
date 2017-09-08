@@ -3,6 +3,12 @@
 require 'rspec'
 require 'anagrams'
 
+describe("Anagrams#initialize") do
+  it("creates an Anagram object with input string saved as the original string") do
+    anagram_test = Anagram.new("desserts")
+    expect(anagram_test.original).to(eq("desserts"))
+  end
+end
 describe("Anagram#is_word?") do
   it("returns false if input does not contain a vowel (including y).") do
     expect(Anagram.is_word?("Rrrgh")).to(eq(false))
