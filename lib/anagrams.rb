@@ -21,8 +21,8 @@ class Anagram
       return "Error: Inputs must consist of real words."
     end
     input_type = input1.include?(" ") | input2.include?(" ") ? "phrases" : "words"
-    input1 = input1.downcase.delete(" ")
-    input2 = input2.downcase.delete(" ")
+    input1 = input1.downcase.gsub(/[^a-z0-9]/,"")
+    input2 = input2.downcase.gsub(/[^a-z0-9]/,"")
     if input1.chars.sort == input2.chars.sort
       result = "These #{input_type} are anagrams."
       if Palindrome.are_palindrome?(input1, input2)

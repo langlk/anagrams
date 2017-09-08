@@ -35,6 +35,10 @@ describe('Anagram#are_anagrams') do
   it('returns an error if either input phrase has a word that has no vowels (including y)') do
     expect(Anagram.are_anagrams("ggggrrr arrrgh", "eat brains")).to(eq("Error: Inputs must consist of real words."))
   end
+
+  it('ignores punctuation and spaces when evaluating inputs as anagrams or a palindrome') do
+    expect(Anagram.are_anagrams("Eat desserts!", "Stressed, tea")).to(eq("These phrases are anagrams."))
+  end
 end
 
 describe("Anagram#is_word?") do
