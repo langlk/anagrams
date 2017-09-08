@@ -22,7 +22,8 @@ class Anagram
   end
 
   def get_anagram_words
-
+    all_anagrams = get_anagrams
+    all_anagrams.select { |anagram| Dictionary.is_word?(anagram) }
   end
 
   # while this method is not in use anymore, I'm leaving it in to show that I did meet the original rules of the project before implementing the is_word? method in Dictionary.

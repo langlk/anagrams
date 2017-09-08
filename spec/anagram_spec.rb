@@ -59,6 +59,18 @@ describe("Anagram#get_anagrams") do
   end
 end
 
+describe("Anagram#get_anagram_words") do
+  it("returns empty array if there are no anagrams of input that Dictionary.is_words recognizes as words") do
+    anagram_test = Anagram.new("")
+    expect(anagram_test.get_anagram_words).to(eq([]))
+  end
+
+  it("returns all single-word anagrams formed from input that Dictionary.is_words? recognizes as words") do
+    anagram_test = Anagram.new("abc")
+    expect(anagram_test.get_anagram_words).to(eq(["bac", "cab"]))
+  end
+end
+
 # while this method is not in use anymore, I'm leaving it in to show that I did meet the original rules of the project before implementing the is_word? method in Dictionary.
 describe("Anagram#is_word?") do
   it("returns false if input does not contain a vowel (including y).") do
