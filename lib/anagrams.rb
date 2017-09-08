@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require 'palindromes'
+require_relative 'palindromes'
 
 class Anagram
   attr_reader(:original)
