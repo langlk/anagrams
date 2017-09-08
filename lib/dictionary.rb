@@ -10,8 +10,12 @@ class Dictionary
         return true
       elsif (word + "s") == string
         return true
+      elsif (word + "ed") == string
+        return true
       end
     end
     false
   end
 end
+
+puts Dictionary.is_word?("mr")
