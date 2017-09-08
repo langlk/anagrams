@@ -80,6 +80,9 @@ _The main class for determining if two strings are anagrams, palindromes, or ant
 * Method returns array containing all possibly combinations of original strings characters if string is longer than one character.
   * Example Input: "abc"
   * Example Output: ["abc", "acb", "bac", "bca", "cab", "cba"]
+* Method ignores case when finding anagrams.
+  * Example Input: "AbC"
+  * Example Output: ["abc", "acb", "bac", "bca", "cab", "cba"]
 * Method ignores non-alphabetical characters (including spaces) in original string when finding anagrams.
   * Example Input: "I'd a"
   * Example Output: ["ida", "iad", "dia", "dai", "aid", "adi"]

@@ -48,8 +48,13 @@ describe("Anagram#get_anagrams") do
     expect(anagram_test.get_anagrams).to(eq(["abc", "acb", "bac", "bca", "cab", "cba"]))
   end
 
+  it("ignores case when finding anagrams") do
+    anagram_test = Anagram.new("AbC")
+    expect(anagram_test.get_anagrams).to(eq(["abc", "acb", "bac", "bca", "cab", "cba"]))
+  end
+
   it("ignores non-alphabetical characters in original string when finding anagrams") do
-    anagram_test = Anagram.new("i'd a")
+    anagram_test = Anagram.new("I'd a")
     expect(anagram_test.get_anagrams).to(eq(["ida", "iad", "dia", "dai", "aid", "adi"]))
   end
 end
