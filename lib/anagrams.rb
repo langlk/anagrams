@@ -12,21 +12,22 @@ class Anagram
   end
 
   def self.are_anagrams(input1, input2)
-    input1.downcase!
-    input2.downcase!
+    input_type = input1.include?(" ") | input2.include?(" ") ? "phrases" : "words"
+    input1 = input1.downcase.delete(" ")
+    input2 = input2.downcase.delete(" ")
     if !(is_word?(input1) & is_word?(input2))
       return "Error: Inputs must consist of real words."
     end
     if input1.chars.sort == input2.chars.sort
-      result = "These words are anagrams."
+      result = "These #{input_type} are anagrams."
       if Palindrome.are_palindrome?(input1, input2)
         result += " They also form a palindrome."
       end
       return result
     elsif are_antigrams?(input1, input2)
-      return "These words are antigrams (no letter matches)."
+      return "These #{input_type} are antigrams (no letter matches)."
     else
-      return "These words are not anagrams."
+      return "These #{input_type} are not anagrams."
     end
   end
 end

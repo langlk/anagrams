@@ -23,8 +23,13 @@ describe('Anagram#are_anagrams') do
   it('returns an error if either input does not contain a vowel (including y)') do
     expect(Anagram.are_anagrams("Rrgh", "Argh")).to(eq("Error: Inputs must consist of real words."))
   end
+
   it('returns if two words are antigrams (no matching letters)') do
     expect(Anagram.are_anagrams("Bob", "Cat")).to(eq("These words are antigrams (no letter matches)."))
+  end
+
+  it('does all of the above for two inputs of one or more words') do
+    expect(Anagram.are_anagrams("eat desserts", "stressed tea")).to(eq("These phrases are anagrams."))
   end
 end
 
