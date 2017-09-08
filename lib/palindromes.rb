@@ -2,6 +2,6 @@
 
 class Palindrome
   def self.are_palindrome?(string1, string2)
-    return false
+    return string1 == string2.reverse
   end
 end
