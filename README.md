@@ -87,6 +87,18 @@ _The main class for determining if two strings are anagrams, palindromes, or ant
   * Example Input: "I'd a"
   * Example Output: ["ida", "iad", "dia", "dai", "aid", "adi"]
 
+#### ```get_anagram_words```
+
+* Method returns empty array if there are no anagrams of input that Dictionary.is_words recognizes as words.
+  * Example Input: ""
+  * Example Output: []
+* Method returns all single-word anagrams formed from input that Dictionary.is_words? recognizes as words.
+  * Example Input: "abc"
+  * Example Output: ["cab"]
+* Method returns all multi-word anagrams formed from input that Dictionary.is_words? recognizes as words.
+  * Example Input: "tacocat"
+  * Example Output: ["a act cot", "a cat cot", "coat act", "coat cat", "coca tat", "taco act", "taco cat"]
+
 ### ```Dictionary```
 
 _Custom Dictionary class for determining if the words given to Anagrams as input are words. Currently has a few very basic rules to account for variations on words existing in the file._
