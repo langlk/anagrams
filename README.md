@@ -69,6 +69,18 @@ _The main class for determining if two strings are anagrams, palindromes, or ant
   * Example Input: a has orginal string = "eat desserts", input string = "stressed tea"
   * Example Output: "These phrases are anagrams."
 
+#### ```get_anagrams```
+
+* Method returns empty array if original string is empty.
+  * Example Input: ""
+  * Example Output: []
+* Method returns array containing original string as is if original string is one character.
+  * Example Input: "a"
+  * Example Output: ["a"]
+* Method returns array containing all possibly combinations of original strings characters if string is longer than one character.
+  * Example Input: "abc"
+  * Example Output: ["abc", "acb", "bac", "bca", "cab", "cba"]
+
 ### ```Dictionary```
 
 _Custom Dictionary class for determining if the words given to Anagrams as input are words. Currently has a few very basic rules to account for variations on words existing in the file._

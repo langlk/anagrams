@@ -10,6 +10,32 @@ describe("Anagram#initialize") do
   end
 end
 
+describe("Anagram#anagram_of") do
+  it("determines whether original string of Anagram object and inputted string are anagrams") do
+    anagram_test = Anagram.new("Eat desserts!")
+    expect(anagram_test.anagram_of("Stressed diva")).to(eq("These phrases are not anagrams."))
+  end
+
+  it("determines whether original string of Anagram object and inputted string are anagrams") do
+    anagram_test = Anagram.new("Eat desserts!")
+    expect(anagram_test.anagram_of("Stressed, Tea")).to(eq("These phrases are anagrams."))
+  end
+
+  it("determines whether original string of Anagram object and inputted string form a palindrome") do
+    anagram_test = Anagram.new("desserts!")
+    expect(anagram_test.anagram_of("Stressed,")).to(eq("These words are anagrams. They also form a palindrome."))
+  end
+
+  it("determines whether original string of Anagram object and inputted string are antigrams") do
+    anagram_test = Anagram.new("Eat desserts!")
+    expect(anagram_test.anagram_of("Pool zoo")).to(eq("These phrases are antigrams (no letter matches)."))
+  end
+end
+
+describe("Anagram#get_anagrams") do
+  
+end
+
 # while this method is not in use anymore, I'm leaving it in to show that I did meet the original rules of the project before implementing the is_word? method in Dictionary.
 describe("Anagram#is_word?") do
   it("returns false if input does not contain a vowel (including y).") do

@@ -14,6 +14,10 @@ class Anagram
     self.class.are_anagrams(@original, string)
   end
 
+  def get_anagrams
+
+  end
+
   # while this method is not in use anymore, I'm leaving it in to show that I did meet the original rules of the project before implementing the is_word? method in Dictionary.
   def self.is_word?(string)
     # Regex to find if input includes a vowel.
