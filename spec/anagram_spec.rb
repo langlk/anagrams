@@ -33,9 +33,14 @@ describe("Anagram#anagram_of") do
 end
 
 describe("Anagram#get_anagrams") do
-  it("empty array if original string is empty") do
+  it("returns empty array if original string is empty") do
     anagram_test = Anagram.new("")
     expect(anagram_test.get_anagrams).to(eq([]))
+  end
+
+  it("returns array containing original string as is if original string is one character") do
+    anagram_test = Anagram.new("a")
+    expect(anagram_test.get_anagrams).to(eq(["a"]))
   end
 end
 

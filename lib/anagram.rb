@@ -17,6 +17,8 @@ class Anagram
   def get_anagrams
     if @original == ""
       return []
+    elsif @original.length == 1
+      return [@original]
     end
   end
 
