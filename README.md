@@ -24,8 +24,15 @@ _A Ruby Script_
   * Example Input: "Ruby" "BURY"
   * Example Output: "These words are anagrams."
 * Program returns "These words form a palindrome." if two words form a palindrome.
-  * Example Input: "Avid" "Diva"
-  * Example Output: "These words form a palindrome."
+  * Two inputs do not form a palindrome if first input does not equal reverse of second.
+    * Example input: "cat" "act"
+    * Example output: false
+  * Two inputs forma a palindrome if first input equals the reverse of the second.
+    * Example input: "diva" "avid"
+    * Example output: true
+  * Program ignores case when checking if word is a palindrome
+    * Example input: "Avid" "DIVA"
+    * Example output: true
 * Program returns an error if either input does not contain a vowel (including y).
   * Example Input: "Rrgh" "Argh"
   * Example Output: "Error: Inputs must consist of real words."

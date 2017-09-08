@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-class Anagrams
+class Anagram
   def self.are_anagrams(input1, input2)
     if input1.downcase.chars.sort == input2.downcase.chars.sort
       return "These words are anagrams."
