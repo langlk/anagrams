@@ -8,6 +8,7 @@ class Dictionary
         return true
       end
     end
+    puts string + ' is not a word'
     false
   end
 end

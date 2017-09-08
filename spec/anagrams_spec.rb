@@ -21,12 +21,12 @@ describe("Anagram#is_word?") do
 end
 
 describe("Anagram#all_words?") do
-  it("returns false if any word in input does not have any vowels (including y)") do
+  it("returns false if any word in input is not a word") do
     expect(Anagram.all_words?("zombies like brains rrrrgh")).to(eq(false))
   end
 
-  it("returns true if all words in input have a vowel (including y)") do
-    expect(Anagram.all_words?("zombies like brains arrrrgh")).to(eq(true))
+  it("returns true if all words in input are words") do
+    expect(Anagram.all_words?("zombies like brains")).to(eq(true))
   end
 end
 
@@ -92,8 +92,8 @@ describe("Anagram#anagram_of") do
   end
 
   it("determines whether original string of Anagram object and inputted string form a palindrome") do
-    anagram_test = Anagram.new("Eat desserts!")
-    expect(anagram_test.anagram_of("Stressed, Tae")).to(eq("These phrases are anagrams. They also form a palindrome."))
+    anagram_test = Anagram.new("desserts!")
+    expect(anagram_test.anagram_of("Stressed,")).to(eq("These words are anagrams. They also form a palindrome."))
   end
 
   it("determines whether original string of Anagram object and inputted string are antigrams") do

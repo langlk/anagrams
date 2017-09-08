@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+
+require_relative 'dictionary'
 require_relative 'palindromes'
 
 class Anagram
@@ -14,7 +16,7 @@ class Anagram
   end
 
   def self.all_words?(string)
-    non_words = string.split.reject { |word| is_word?(word)}
+    non_words = string.split.reject { |word| is_word?(word) }
     non_words.length == 0
   end
 
@@ -24,14 +26,17 @@ class Anagram
   end
 
   def self.are_anagrams(string1, string2)
+    # Regex to remove punctuation from downcased inputs.
+    string1 = string1.downcase.gsub(/[^a-z0-9\s]/,"")
+    string2 = string2.downcase.gsub(/[^a-z0-9\s]/,"")
     if !(all_words?(string1) & all_words?(string2))
       return "Error: Inputs must consist of real words."
     end
     # Result should say "words" if inputs are one word each, and "phrases" otherwise.
     input_type = string1.include?(" ") | string2.include?(" ") ? "phrases" : "words"
-    # Regex to remove everything but letters and numbers from downcased inputs.
-    string1 = string1.downcase.gsub(/[^a-z0-9]/,"")
-    string2 = string2.downcase.gsub(/[^a-z0-9]/,"")
+    # Now that we know if words are plural, we don't want spaces.
+    string1.delete!(" ")
+    string2.delete!(" ")
     if string1.chars.sort == string2.chars.sort
       result = "These #{input_type} are anagrams."
       if Palindrome.are_palindrome?(string1, string2)
