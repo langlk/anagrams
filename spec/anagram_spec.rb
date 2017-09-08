@@ -35,12 +35,17 @@ end
 describe("Anagram#get_anagrams") do
   it("returns empty array if original string is empty") do
     anagram_test = Anagram.new("")
-    expect(anagram_test.get_anagrams).to(eq([]))
+    expect(anagram_test.get_anagrams).to(eq([""]))
   end
 
   it("returns array containing original string as is if original string is one character") do
     anagram_test = Anagram.new("a")
     expect(anagram_test.get_anagrams).to(eq(["a"]))
+  end
+
+  it("returns array containing all possibly combinations of original strings characters if string is longer than one character") do
+    anagram_test = Anagram.new("abc")
+    expect(anagram_test.get_anagrams).to(eq(["abc", "acb", "bac", "bca", "cab", "cba"]))
   end
 end
 

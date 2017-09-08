@@ -15,10 +15,8 @@ class Anagram
   end
 
   def get_anagrams
-    if @original == ""
-      return []
-    elsif @original.length == 1
-      return [@original]
+    @original.chars.permutation.map do |permutation|
+      permutation.join("")
     end
   end
 

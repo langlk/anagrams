@@ -71,9 +71,9 @@ _The main class for determining if two strings are anagrams, palindromes, or ant
 
 #### ```get_anagrams```
 
-* Method returns empty array if original string is empty.
+* Method returns array with empty string if original string is empty.
   * Example Input: ""
-  * Example Output: []
+  * Example Output: [""]
 * Method returns array containing original string as is if original string is one character.
   * Example Input: "a"
   * Example Output: ["a"]
