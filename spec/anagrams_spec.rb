@@ -16,7 +16,13 @@ describe('Anagram#are_anagrams') do
     expect(Anagram.are_anagrams("Ruby", "BURY")).to(eq("These words are anagrams."))
   end
 
-  it ('if two anagrams also form a palindrome, return that as well') do
+  it('returns if two anagrams also form a palindrome') do
     expect(Anagram.are_anagrams("Avid", "Diva")).to(eq("These words are anagrams. They also form a palindrome."))
+  end
+end
+
+describe("Anagram#is_word?") do
+  it("returns an error if input does not contain a vowel (including y).") do
+    expect(Anagram.is_word?("Rrrgh")).to(eq(false))
   end
 end

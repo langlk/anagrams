@@ -2,6 +2,10 @@
 require 'palindromes'
 
 class Anagram
+  def self.is_word?(input)
+    return false
+  end
+
   def self.are_anagrams(input1, input2)
     if input1.downcase.chars.sort == input2.downcase.chars.sort
       result = "These words are anagrams."
