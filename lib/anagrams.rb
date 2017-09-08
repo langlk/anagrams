@@ -7,12 +7,13 @@ class Anagram
   end
 
   def self.all_words?(input)
-    return false
+    non_words = input.split.reject { |word| is_word?(word)}
+    non_words.length == 0
   end
 
   def self.are_antigrams?(input1, input2)
     matches = input1.chars.select { |char| input2.include?(char) }
-    return matches.length == 0
+    matches.length == 0
   end
 
   def self.are_anagrams(input1, input2)

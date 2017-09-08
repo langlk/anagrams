@@ -57,4 +57,8 @@ describe("Anagram#all_words?") do
   it("returns false if any word in input does not have any vowels (including y)") do
     expect(Anagram.all_words?("zombies like brains rrrrgh")).to(eq(false))
   end
+
+  it("returns true if all words in input have a vowel (including y)") do
+    expect(Anagram.all_words?("zombies like brains arrrrgh")).to(eq(true))
+  end
 end
