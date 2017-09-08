@@ -23,4 +23,8 @@ describe("Dictionary") do
   it('returns true if word is equal to a word in words file + "ed"') do
     expect(Dictionary.is_word?("stressed")).to(eq(true))
   end
+
+  it('returns true if word is equal to a word in words file + "est"') do
+    expect(Dictionary.is_word?("tallest")).to(eq(true))
+  end
 end

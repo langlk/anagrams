@@ -12,10 +12,11 @@ class Dictionary
         return true
       elsif (word + "ed") == string
         return true
+      elsif (word + "est") == string
+        return true
       end
     end
+    puts string + " is not a word"
     false
   end
 end
-
-puts Dictionary.is_word?("mr")

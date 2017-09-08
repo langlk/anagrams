@@ -16,7 +16,7 @@ class Anagram
   end
 
   def self.all_words?(string)
-    non_words = string.split.reject { |word| is_word?(word) }
+    non_words = string.split.reject { |word| Dictionary.is_word?(word) }
     non_words.length == 0
   end
 

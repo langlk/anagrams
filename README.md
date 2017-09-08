@@ -85,7 +85,10 @@ _A Ruby script to evaluate whether two inputs are anagrams, palindromes, or anti
 * Method returns true if word is equal to a word in words file + "ed".
   * Example Input: "stressed"
   * Example Output: true
-
+* Method returns true if word is equal to a word in words file + "est".
+  * Example Input: "tallest"
+  * Example Output: true
+  
 ## Support and contact details
 
 _Please contact [kels.langlois@gmail.com](mailto:kels.langlois@gmail.com) with questions, comments, or issues._
