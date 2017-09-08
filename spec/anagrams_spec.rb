@@ -11,4 +11,8 @@ describe('Anagrams#are_anagrams') do
   it('returns "These words are anagrams." if two words have the same letters') do
     expect(Anagrams.are_anagrams("ruby", "bury")).to(eq("These words are anagrams."))
   end
+
+  it('determines if two words are anagrams regardless of case') do
+    expect(Anagrams.are_anagrams("Ruby", "BURY")).to(eq("These words are anagrams."))
+  end
 end

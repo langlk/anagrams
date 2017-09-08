@@ -14,7 +14,7 @@ _A Ruby Script_
 
 ## Specifications
 
-* Program returns "These words are not anagrams." if two words are not anagrams
+* Program returns "These words are not anagrams." if two words are not anagrams.
   * Example Input: "Bob" "Potato"
   * Example Output: "These words are not anagrams."
 * Program returns "These words are anagrams." if two words have the same letters.
