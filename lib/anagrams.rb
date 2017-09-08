@@ -7,7 +7,8 @@ class Anagram
   end
 
   def self.are_antigrams?(input1, input2)
-    return false
+    matches = input1.chars.select { |char| input2.include?(char) }
+    return matches.length == 0
   end
 
   def self.are_anagrams(input1, input2)
