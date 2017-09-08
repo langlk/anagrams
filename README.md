@@ -1,12 +1,12 @@
 # Anagrams
 
-#### _Project in Ruby_
+#### _Epicodus Project in Ruby, September 8, 2017_
 
 #### By Kelsey Langlois
 
 ## Description
 
-_A Ruby Script_
+_A Ruby script to evaluate whether two inputs are anagrams, palindromes, or antigrams. Two strings are anagrams if they share all the same letters, palindromes if the first string is the reverse of the second, and antigrams if they share no letters._
 
 ## Setup/Installation Requirements
 
