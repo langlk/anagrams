@@ -8,37 +8,37 @@ class Anagram
     @original = string
   end
 
-  def self.is_word?(input)
+  def self.is_word?(string)
     # Regex to find if input includes a vowel.
-    input.match(/[aeiouy]/i) ? true : false
+    string.match(/[aeiouy]/i) ? true : false
   end
 
-  def self.all_words?(input)
-    non_words = input.split.reject { |word| is_word?(word)}
+  def self.all_words?(string)
+    non_words = string.split.reject { |word| is_word?(word)}
     non_words.length == 0
   end
 
-  def self.are_antigrams?(input1, input2)
-    matches = input1.chars.select { |char| input2.include?(char) }
+  def self.are_antigrams?(string1, string2)
+    matches = string1.chars.select { |char| string2.include?(char) }
     matches.length == 0
   end
 
-  def self.are_anagrams(input1, input2)
-    if !(all_words?(input1) & all_words?(input2))
+  def self.are_anagrams(string1, string2)
+    if !(all_words?(string1) & all_words?(string2))
       return "Error: Inputs must consist of real words."
     end
     # Result should say "words" if inputs are one word each, and "phrases" otherwise.
-    input_type = input1.include?(" ") | input2.include?(" ") ? "phrases" : "words"
+    input_type = string1.include?(" ") | string2.include?(" ") ? "phrases" : "words"
     # Regex to remove everything but letters and numbers from downcased inputs.
-    input1 = input1.downcase.gsub(/[^a-z0-9]/,"")
-    input2 = input2.downcase.gsub(/[^a-z0-9]/,"")
-    if input1.chars.sort == input2.chars.sort
+    string1 = string1.downcase.gsub(/[^a-z0-9]/,"")
+    string2 = string2.downcase.gsub(/[^a-z0-9]/,"")
+    if string1.chars.sort == string2.chars.sort
       result = "These #{input_type} are anagrams."
-      if Palindrome.are_palindrome?(input1, input2)
+      if Palindrome.are_palindrome?(string1, string2)
         result += " They also form a palindrome."
       end
       return result
-    elsif are_antigrams?(input1, input2)
+    elsif are_antigrams?(string1, string2)
       return "These #{input_type} are antigrams (no letter matches)."
     else
       return "These #{input_type} are not anagrams."
