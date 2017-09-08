@@ -34,3 +34,9 @@ describe("Anagram#is_word?") do
     expect(Anagram.is_word?("Hello")).to(eq(true))
   end
 end
+
+describe("Anagram#are_antigrams?") do
+  it("returns false if two words have any matching letters") do
+    expect(Anagram.are_antigrams?("Cat", "Tab")).to(eq(false))
+  end
+end

@@ -6,6 +6,10 @@ class Anagram
     input.match(/[aeiouy]/i) ? true : false
   end
 
+  def self.are_antigrams?(input1, input2)
+    return false
+  end
+
   def self.are_anagrams(input1, input2)
     puts is_word?(input1)
     if !(is_word?(input1) & is_word?(input2))
