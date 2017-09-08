@@ -6,6 +6,10 @@ class Anagram
     input.match(/[aeiouy]/i) ? true : false
   end
 
+  def self.all_words?(input)
+    return false
+  end
+
   def self.are_antigrams?(input1, input2)
     matches = input1.chars.select { |char| input2.include?(char) }
     return matches.length == 0

@@ -52,3 +52,9 @@ describe("Anagram#are_antigrams?") do
     expect(Anagram.are_antigrams?("Cat", "Bob")).to(eq(true))
   end
 end
+
+describe("Anagram#all_words?") do
+  it("returns false if any word in input does not have any vowels (including y)") do
+    expect(Anagram.all_words?("zombies like brains rrrrgh")).to(eq(false))
+  end
+end
